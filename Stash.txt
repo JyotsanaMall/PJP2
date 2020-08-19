@@ -1,0 +1,2 @@
+Implementing stashing: git stash
+		       git stash pop
