@@ -1,0 +1,53 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.sapient.week2:Demo >-----------------------
+[INFO] Building Demo 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Demo ---
+[INFO] Deleting C:\Users\JYOTSANA\Desktop\PJP2\maven\Demo\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Demo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\JYOTSANA\Desktop\PJP2\maven\Demo\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Demo ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\Users\JYOTSANA\Desktop\PJP2\maven\Demo\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Demo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\JYOTSANA\Desktop\PJP2\maven\Demo\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Demo ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\Users\JYOTSANA\Desktop\PJP2\maven\Demo\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ Demo ---
+[INFO] Surefire report directory: C:\Users\JYOTSANA\Desktop\PJP2\maven\Demo\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.sapient.week2.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.341 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ Demo ---
+[INFO] Building jar: C:\Users\JYOTSANA\Desktop\PJP2\maven\Demo\target\Demo-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ Demo ---
+[INFO] Installing C:\Users\JYOTSANA\Desktop\PJP2\maven\Demo\target\Demo-1.0-SNAPSHOT.jar to C:\Users\JYOTSANA\.m2\repository\com\sapient\week2\Demo\1.0-SNAPSHOT\Demo-1.0-SNAPSHOT.jar
+[INFO] Installing C:\Users\JYOTSANA\Desktop\PJP2\maven\Demo\pom.xml to C:\Users\JYOTSANA\.m2\repository\com\sapient\week2\Demo\1.0-SNAPSHOT\Demo-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  48.504 s
+[INFO] Finished at: 2020-08-21T16:11:06+05:30
+[INFO] ------------------------------------------------------------------------
