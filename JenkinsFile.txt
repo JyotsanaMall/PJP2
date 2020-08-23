@@ -1,19 +1,33 @@
+  
 pipeline {
-   agent any
-   stages {
-      stage('Build') {
-         steps {
-            git 'https://github.com/JyotsanaMall/PJP2.git'
-            // Run Maven on a Unix agent.
-            //sh "./mvnw -Dmaven.test.failure.ignore=true clean package"
-	    bat "mvn -Dmaven.test.failure.ignore=true clean package"
-         }
-         post {
-            success {
-               junit '**/target/surefire-reports/TEST-*.xml'
-               archiveArtifacts 'target/*.jar'
+    agent any
+    stages {
+	stage ('Maven Clean') {
+            steps {
+                echo 'Project clean stage'
+		bat label : 'Clean running', script: '''cd DateTimeCalulator & mvn clean'''
             }
-         }
-      }
-   }
+        }
+
+        stage ('Maven Compile') {
+            steps {
+                echo 'Project compile stage'
+		bat label : 'Compilation running', script: '''cd DateTimeCalulator & mvn compile'''
+            }
+        }
+
+        stage ('Unit Test') {
+            steps {
+                echo 'Project Testiong stage'
+		bat label:'Testing running', script: '''cd DateTimeCalulator & mvn test''' 
+            }
+	}
+	stage ('Maven Package'){
+            steps {
+                echo 'Project packaging stage'
+		bat label:'Project packaging', script: '''cd DateTimeCalulator & mvn package''' 
+            }
+            
+        }
+    }
 }
