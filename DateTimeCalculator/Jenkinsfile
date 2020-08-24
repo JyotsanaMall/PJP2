@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven 3.6.3'
+    }
+    stages {
+        stage ('Initialize') {
+            steps {
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                '''
+            }
+        }
+
+        stage ('Build') {
+            steps {
+                sh 'cd DateTimeCalculator'
+                sh 'mvn -f DateTimeCalculator clean'
+                sh 'mvn -f DateTimeCalculator test'
+                sh 'mvn -f DateTimeCalculator install'
+            }
+        }
+    }
+}
