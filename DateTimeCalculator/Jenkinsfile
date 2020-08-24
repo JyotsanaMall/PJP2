@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
-                sh '''
+                bat '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
                 '''
@@ -15,10 +15,10 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'cd DateTimeCalculator'
-                sh 'mvn -f DateTimeCalculator clean'
-                sh 'mvn -f DateTimeCalculator test'
-                sh 'mvn -f DateTimeCalculator install'
+                bat 'cd DateTimeCalculator'
+                bat 'mvn -f DateTimeCalculator clean'
+                bat 'mvn -f DateTimeCalculator test'
+                bat 'mvn -f DateTimeCalculator install'
             }
         }
     }
