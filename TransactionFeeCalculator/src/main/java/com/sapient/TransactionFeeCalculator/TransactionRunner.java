@@ -66,7 +66,9 @@ public class TransactionRunner implements TransactionIO {
 				else 
 					return a.getPriorityFlag().compareTo(b.getPriorityFlag()); 
 				});
-
+			String [] list = {"Client ID", "TransactionType", "Transaction Date",
+					"Priority Flag", "Fee"};
+			csvWriter.writeNext(list);
 			for (TransactionAttribute t : transactionList) {
 				String [] row = new String[5];
 				row[0] = t.getClientId(); 
