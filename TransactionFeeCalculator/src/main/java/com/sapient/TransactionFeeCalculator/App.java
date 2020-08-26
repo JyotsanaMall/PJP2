@@ -1,6 +1,5 @@
 package com.sapient.TransactionFeeCalculator;
 
-import java.io.File;
 import java.nio.file.Path;
 import java.util.List;
 
@@ -13,7 +12,7 @@ public class App {
 		List<TransactionAttribute> list = transactionIO.read(Path.of(FILE).toFile());
 		TransactionProcessor transactionProcessor = new TransactionProcessor();
 		transactionProcessor.process(list);
-		File report = transactionIO.write(list);
+		transactionIO.write(list);
 	}
 
-}
+}                                                                                                  
